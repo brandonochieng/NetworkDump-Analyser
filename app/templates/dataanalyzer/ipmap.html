@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head lang="en">
+    <meta charset="UTF-8">
+    <br>
+    <title>Access Map</title>
+
+    <style type="text/css">
+            body {
+                margin: 0;
+            }
+        .list{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+{#            height: 150px;#}
+            background-color: rgba(64,64,64,.5);
+
+        }
+        .roll-list{
+            position: relative;
+            width: 80%;
+            height: 150px;
+            overflow: hidden;
+        }
+        .inner-list{
+            position: absolute;
+            overflow: hidden;
+        }
+         a{
+            display: inline-block;
+            float: right;
+            width: 100px;
+            height: 40px;
+             background-color: rgba(0,206,209,.5);
+             z-index: 999;
+        }
+        table{
+            color:#13daec;
+            font-size:14px;
+        }
+        table>thead{
+            margin-top: 40px;
+        }
+        table>thead>tr>th{
+            height: 40px;
+            vertical-align: middle;
+            font-size: 18px;
+        }
+        table>thead>tr>th,
+        table>tbody>tr>td{
+            text-align: center;
+            white-space: nowrap;
+            text-overflow: ellipsis ;
+            overflow: hidden;
+            max-width: 300px;
+        }
+
+    </style>
+</head>
+<body bgcolor="#1b1b1b">
+<div id="ipmap"></div>
+<div class="list">
+    <a class="btn" href="javascript:;"></a>
+    <table width="80%"  style="table-layout:fixed;" class="table table-hover table-responsive  table-condensed table-striped">
+              <thead>
+                <tr>
+                    <th>Access IP</th>
+                    <th>Physical Address</th>
+                    <th>Latitude and Longitude</th>
+                    <th>Data Flow</th>
+                </tr>
+              </thead>
+        </table>
+    <div class="roll-list" >
+        <div class="inner-list" id="list">
+
+            <table width="100%"  style="table-layout:fixed;" class="table table-hover table-responsive  table-condensed table-striped">
+              <tbody>
+
+              {% for key, value in ip_value %}
+                  <tr>
+                  <td>{{ value.split(':')[1] }}</td>
+                  <td>{{ key }}</td>
+                  <td>{{ geo_data[key] }}</td>
+                  <td >{{ value.split(':')[0] }}KB</td>
+                </tr>
+              {% endfor %}
+               </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+{% autoescape false %}
+<!-- ECharts单文件引入 -->
+<script src="../../static/echarts-2.27/doc/example/www/js/echarts.js" type="text/javascript"></script>
+<script src="../../static/bootstrap-3.3.5/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" >
+
+    require.config({
+        paths: {
+            echarts: '../../static/echarts-2.27/build/dist/'
+        }
+    });
+
+    require(
+    [
+        'echarts',
+        'echarts/chart/map'
+    ],
+    function (ec) {
+        $('#ipmap').width($(window).width());
+        $('#ipmap').height($(window).height());
+        // 初始化地图
+        var myChart = ec.init(document.getElementById('ipmap'));
+        var option = {
+    backgroundColor: '#1b1b1b',
+    color: ['gold','aqua','lime'],
+    title : {
+        text: 'Access IP traffic map',
+        x:'center',
+        textStyle : {
+            color: '#fff'
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: '{b}'
+    },
+
+    dataRange: {
+        show: false,
+        min : 0,
+        max : 100,
+        calculable : true,
+        color: ['#ff3333', 'orange', 'yellow','lime','aqua'],
+        textStyle:{
+            color:'#fff'
+        }
+    },
+    series : [
+        {
+            name: 'world',
+            type: 'map',
+            roam: true,
+            hoverable: false,
+            mapType: 'world',
+            itemStyle:{
+                normal:{
+                    borderColor:'rgba(100,149,237,1)',
+                    borderWidth:0.5,
+                    areaStyle:{
+                        color: '#1b1b1b'
+                    }
+                }
+            },
+            data:[],
+              // 自定义名称
+            nameMap : {
+                'Afghanistan':'Afghanistan',
+                'Angola':'Angola',
+                'Albania':'Albania',
+                'United Arab Emirates':'United Arab Emirates',
+                'Argentina':'Argentina',
+                'Armenia':'Armenia',
+                'French Southern and Antarctic Lands':'French Southern and Antarctic Lands',
+                'Australia':'Australia',
+                'Austria':'Austria',
+                'Azerbaijan':'Azerbaijan',
+                'Burundi':'Burundi',
+                'Belgium':'Belgium',
+                'Burkina Faso':'Burkina Faso',
+                'Bangladesh':'Bangladesh',
+                'Bulgaria':'Bulgaria',
+                'The Bahamas':'The Bahamas',
+                'Bosnia and Herzegovina':'Bosnia and Herzegovina',
+                'Belarus':'Belarus',
+                'Belize':'Belize',
+                'Bermuda':'Bermuda',
+                'Bolivia':'Bolivia',
+                'Brazil':'Brazil',
+                'Brunei':'Brunei',
+                'Bhutan':'Bhutan',
+                'Botswana':'Botswana',
+                'Central African Republic':'Central African Republic',
+                'Canada':'Canada',
+                'Switzerland':'Switzerland',
+                'Chile':'Chile',
+                'China':'China',
+                'Ivory Coast':'Ivory Coast',
+                'Cameroon':'Cameroon',
+                'Democratic Republic of the Congo':'Democratic Republic of the Congo',
+                'Republic of the Congo':'Republic of the Congo',
+                'Colombia':'Colombia',
+                'Costa Rica':'Costa Rica',
+                'Cuba':'Cuba',
+                'Northern Cyprus':'Northern Cyprus',
+                'Cyprus':'Cyprus',
+                'Czech Republic':'Czech Republic',
+                'Germany':'Germany',
+                'Djibouti':'Djibouti',
+                'Denmark':'Denmark',
+                'Dominican Republic':'Dominican Republic',
+                'Algeria':'Algeria',
+                'Ecuador':'Ecuador',
+                'Egypt':'Egypt',
+                'Eritrea':'Eritrea',
+                'Spain':'Spain',
+                'Estonia':'Estonia',
+                'Ethiopia':'Ethiopia',
+                'Finland':'Finland',
+                'Fiji':'Fiji',
+                'Falkland Islands':'Falkland Islands',
+                'France':'France',
+                'Gabon':'Gabon',
+                'United Kingdom':'United Kingdom',
+                'Georgia':'Georgia',
+                'Ghana':'Ghana',
+                'Guinea':'Guinea',
+                'Gambia':'Gambia',
+                'Guinea Bissau':'Guinea Bissau',
+                'Equatorial Guinea':'Equatorial Guinea',
+                'Greece':'Greece',
+                'Greenland':'Greenland',
+                'Guatemala':'Guatemala',
+                'French Guiana':'French Guiana',
+                'Guyana':'Guyana',
+                'Honduras':'Honduras',
+                'Croatia':'Croatia',
+                'Haiti':'Haiti',
+                'Hungary':'Hungary',
+                'Indonesia':'Indonesia',
+                'India':'India',
+                'Ireland':'Ireland',
+                'Iran':'Iran',
+                'Iraq':'Iraq',
+                'Iceland':'Iceland',
+                'Israel':'Israel',
+                'Italy':'Italy',
+                'Jamaica':'Jamaica',
+                'Jordan':'Jordan',
+                'Japan':'Japan',
+                'Kazakhstan':'Kazakhstan',
+                'Kenya':'Kenya',
+                'Kyrgyzstan':'Kyrgyzstan',
+                'Cambodia':'Cambodia',
+                'South Korea':'South Korea',
+                'Kosovo':'Kosovo',
+                'Kuwait':'Kuwait',
+                'Laos':'Laos',
+                'Lebanon':'Lebanon',
+                'Liberia':'Liberia',
+                'Libya':'Libya',
+                'Sri Lanka':'Sri Lanka',
+                'Lesotho':'Lesotho',
+                'Lithuania':'Lithuania',
+                'Luxembourg':'Luxembourg',
+                'Latvia':'Latvia',
+                'Morocco':'Morocco',
+                'Moldova':'Moldova',
+                'Madagascar':'Madagascar',
+                'Mexico':'Mexico',
+                'Macedonia':'Macedonia',
+                'Mali':'Mali',
+                'Myanmar':'Myanmar',
+                'Montenegro':'Montenegro',
+                'Mongolia':'Mongolia',
+                'Mozambique':'Mozambique',
+                'Mauritania':'Mauritania',
+                'Malawi':'Malawi',
+                'Malaysia':'Malaysia',
+                'Namibia':'Namibia',
+                'New Caledonia':'New Caledonia',
+                'Niger':'Niger',
+                'Nigeria':'Nigeria',
+                'Nicaragua':'Nicaragua',
+                'Netherlands':'Netherlands',
+                'Norway':'Norway',
+                'Nepal':'Nepal',
+                'New Zealand':'New Zealand',
+                'Oman':'Oman',
+                'Pakistan':'Pakistan',
+                'Panama':'Panama',
+                'Peru':'Peru',
+                'Philippines':'Philippines',
+                'Papua New Guinea':'Papua New Guinea',
+                'Poland':'Poland',
+                'Puerto Rico':'Puerto Rico',
+                'North Korea':'North Korea',
+                'Portugal':'Portugal',
+                'Paraguay':'Paraguay',
+                'Qatar':'Qatar',
+                'Romania':'Romania',
+                'Russia':'Russia',
+                'Rwanda':'Rwanda',
+                'Western Sahara':'Western Sahara',
+                'Saudi Arabia':'Saudi Arabia',
+                'Sudan':'Sudan',
+                'South Sudan':'South Sudan',
+                'Senegal':'Senegal',
+                'Solomon Islands':'Solomon Islands',
+                'Sierra Leone':'Sierra Leone',
+                'El Salvador':'El Salvador',
+                'Somaliland':'Somaliland',
+                'Somalia':'Somalia',
+                'Republic of Serbia':'Republic of Serbia',
+                'Suriname':'Suriname',
+                'Slovakia':'Slovakia',
+                'Slovenia':'Slovenia',
+                'Sweden':'Sweden',
+                'Swaziland':'Swaziland',
+                'Syria':'Syria',
+                'Chad':'Chad',
+                'Togo':'Togo',
+                'Thailand':'Thailand',
+                'Tajikistan':'Tajikistan',
+                'Turkmenistan':'Turkmenistan',
+                'East Timor':'East Timor',
+                'Trinidad and Tobago':'Trinidad and Tobago',
+                'Tunisia':'Tunisia',
+                'Turkey':'Turkey',
+                'United Republic of Tanzania':'United Republic of Tanzania',
+                'Uganda':'Uganda',
+                'Ukraine':'Ukraine',
+                'Uruguay':'Uruguay',
+                'United States of America':'United States',
+                'Uzbekistan':'Uzbekistan',
+                'Venezuela':'Venezuela',
+                'Vietnam':'Vietnam',
+                'Vanuatu':'Vanuatu',
+                'West Bank':'West Bank',
+                'Yemen':'Yemen',
+                'South Africa':'South Africa',
+                'Zambia':'Zambia',
+                'Zimbabwe':'Zimbabwe'
+            },
+            markLine : {
+                smooth:true,
+                effect : {
+                    show: true,
+                    scaleSize: 1,
+                    period: 30,
+                    color: '#fff',
+                    shadowBlur: 10
+                },
+                itemStyle : {
+                    normal: {
+                        borderWidth:1,
+                        lineStyle: {
+                            type: 'solid',
+                            shadowBlur: 10
+                        }
+                    }
+                },
+                data : [
+                    {% for key, value in ip_value%}
+                        [{name:'{{ mygeo[0] }}'}, {name:'{{ key }}',value:{{ value.split(':')[0] }}}],
+                    {% endfor %}
+                    [{name:'{{ mygeo[0] }}'}, {name:'{{ mygeo[0] }}',value:0}]
+                ]
+            },
+            markPoint : {
+                symbol:'emptyCircle',
+                symbolSize : function (v){
+                    return 10 + v/10
+                },
+                effect : {
+                    show: true,
+                    shadowBlur : 0
+                },
+                itemStyle:{
+                    normal:{
+                        label:{show:false}
+                    },
+                    emphasis: {
+                        label:{position:'top'}
+                    }
+                },
+                data : [
+                    {% for key, value in ip_value %}
+                        {name:'{{ key }}',value:{{ value.split(':')[0] }}},
+                    {% endfor %}
+                    {name:'{{ mygeo[0] }}',value:0}
+                ]
+            },
+            geoCoord: {
+        {% for name, geo in geo_data.items() %}
+            '{{ name }}':{{ geo }},
+        {% endfor %}
+            '{{ mygeo[0] }}':[{{ mygeo[1] }}, {{ mygeo[2] }}]
+            }
+        }
+    ]
+};
+        myChart.setOption(option);
+
+    }
+);
+
+</script>
+
+
+<script>
+    $(function(){
+
+        $('.btn').click(function(){
+           $('.roll-list').toggle();
+          {#  if($(this).hasClass('min')){
+                $(this).removeClass('min').addClass('max').text('+');
+                $(this).next('.roll-list').slideDown();
+            }
+            else{
+                  $(this).removeClass('max').addClass('min').text('-');
+                $(this).next('.roll-list').slideUp();
+            }#}
+        })
+        function scroll(){
+             var y = 0;
+            var innerEl = $('#list');
+            var rollEl = innerEl.parent();
+            var waitEl = innerEl.clone(true).removeAttr('id');
+            rollEl.append(waitEl);
+
+            setInterval(function(){
+                y = y - 0.2;
+                innerEl.css({
+                    top: y
+                });
+                waitEl.css({
+                    top: y + innerEl.height()
+                });
+
+                if(y * -1 > innerEl.height()){
+                    y = 0;
+                    var tmp = innerEl;
+
+                    innerEl = waitEl;
+                    waitEl = tmp;
+                }
+            },20);
+
+        }
+         scroll();
+    })
+</script>
+
+{% endautoescape %}
+</body>
+</html>

